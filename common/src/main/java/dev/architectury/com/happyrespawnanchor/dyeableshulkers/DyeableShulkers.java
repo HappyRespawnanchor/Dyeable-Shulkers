@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public final class DyeableShulkers {
-    public static final String MOD_ID = "dye_my_shulkers";
+    public static final String MOD_ID = "dyeable_shulkers";
 
     public static void init() {
         // Write common init code here.
@@ -33,12 +33,16 @@ public final class DyeableShulkers {
         DYE_COLOR_MAP.put(Items.GREEN_DYE, (byte) 13);
         DYE_COLOR_MAP.put(Items.RED_DYE, (byte) 14);
         DYE_COLOR_MAP.put(Items.BLACK_DYE, (byte) 15);
-        // DYE_COLOR_MAP.put(Items.WATER_BUCKET, (byte) 16);
+        //DYE_COLOR_MAP.put(Items.WATER_BUCKET, (byte) 16);
     }
 
-    public static void setColor(Entity entity, byte color) {
-        entity.getEntityData().set(Shulker.DATA_COLOR_ID, color);
+    public static void setColor(Entity entity, byte dyeColorID) {
+        entity.getEntityData().set(Shulker.DATA_COLOR_ID, dyeColorID);
     }
+    public static Byte getColorID(Entity entity) {
+        return entity.getEntityData().get(Shulker.DATA_COLOR_ID);
+    }
+
 }
 
 

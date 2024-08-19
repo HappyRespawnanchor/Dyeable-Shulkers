@@ -5,7 +5,7 @@
   "version": "${version}",
   "name": "Dyeable Shulkers",
   "accessWidener": "dyeable_shulkers.accesswidener",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Dye your Shulkers!",
   "authors": [
     "Me!"
   ],
