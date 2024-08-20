@@ -1,17 +1,16 @@
 {
   "schemaVersion": 1,
   "id": "dyeable_shulkers",
-
   "version": "${version}",
   "name": "Dyeable Shulkers",
   "accessWidener": "dyeable_shulkers.accesswidener",
   "description": "Dye your Shulkers!",
   "authors": [
-    "Me!"
+    "HappyRespawnanchor"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/HappyRespawnanchor/dyeable_shulkers",
+    "sources": "https://github.com/HappyRespawnanchor/dyeable_shulkers"
   },
   "license": "CC0-1.0",
   "icon": "assets/dye_my_shulkers/icon.png",
@@ -19,20 +18,12 @@
   "entrypoints": {
     "main": [
       "dev.architectury.com.happyrespawnanchor.dyeableshulkers.fabric.DyeableShulkersFabric"
-    ],
-    "client": [
     ]
   },
-  "mixins": [
-    "dyeable_shulkers.mixins.json"
-  ],
   "depends": {
     "fabricloader": ">=0.15.11",
     "minecraft": ">=1.21",
-    "java": ">=17",
+    "java": ">=21",
     "fabric-api": "*"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }

@@ -1,0 +1,11 @@
+{
+  "bocchi_sound": {
+    "category": "item",
+    "sounds": [
+      {
+        "name": "dyeable_shulkers:bocchi",
+        "stream": false
+      }
+    ]
+  }
+}

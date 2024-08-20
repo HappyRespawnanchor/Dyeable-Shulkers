@@ -10,12 +10,9 @@ import java.util.Map;
 
 public final class DyeableShulkers {
     public static final String MOD_ID = "dyeable_shulkers";
-
-    public static void init() {
-        // Write common init code here.
-
-    }
     public static final Map<Item, Byte> DYE_COLOR_MAP = new HashMap<>();
+    public static final Map<Byte, Item> COLOR_ID_MAP = new HashMap<>();
+
     static {
         DYE_COLOR_MAP.put(Items.WHITE_DYE, (byte) 0);
         DYE_COLOR_MAP.put(Items.ORANGE_DYE, (byte) 1);
@@ -33,16 +30,41 @@ public final class DyeableShulkers {
         DYE_COLOR_MAP.put(Items.GREEN_DYE, (byte) 13);
         DYE_COLOR_MAP.put(Items.RED_DYE, (byte) 14);
         DYE_COLOR_MAP.put(Items.BLACK_DYE, (byte) 15);
-        //DYE_COLOR_MAP.put(Items.WATER_BUCKET, (byte) 16);
+        DYE_COLOR_MAP.put(Items.WOODEN_SWORD, (byte) 16);
+        DYE_COLOR_MAP.put(Items.STONE_SWORD, (byte) 16);
+        DYE_COLOR_MAP.put(Items.IRON_SWORD, (byte) 16);
+        DYE_COLOR_MAP.put(Items.GOLDEN_SWORD, (byte) 16);
+        DYE_COLOR_MAP.put(Items.DIAMOND_SWORD, (byte) 16);
+        DYE_COLOR_MAP.put(Items.NETHERITE_SWORD, (byte) 16);
+        DYE_COLOR_MAP.put(Items.END_ROD, (byte) 16);
+    }
+
+    static {
+        for (Map.Entry<Item, Byte> entry : DYE_COLOR_MAP.entrySet()) {
+            COLOR_ID_MAP.put(entry.getValue(), entry.getKey());
+        }
+    }
+
+    public static void init() {
+        // Write common init code here.
+
     }
 
     public static void setColor(Entity entity, byte dyeColorID) {
         entity.getEntityData().set(Shulker.DATA_COLOR_ID, dyeColorID);
     }
+
     public static Byte getColorID(Entity entity) {
         return entity.getEntityData().get(Shulker.DATA_COLOR_ID);
     }
 
+    public static Item getItem(Byte dyeColorID) {
+        return COLOR_ID_MAP.get(dyeColorID);
+    }
+
+    public static Byte getColorMap(Item itemInHand) {
+        return DyeableShulkers.DYE_COLOR_MAP.get(itemInHand);
+    }
 }
 
 
