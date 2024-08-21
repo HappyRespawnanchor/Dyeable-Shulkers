@@ -17,7 +17,7 @@
     "issues": "https://github.com/HappyRespawnanchor/dyeable_shulkers/issues"
   },
   "license": "CC0-1.0",
-  "icon": "assets/dye_my_shulkers/icon.png",
+  "icon": "assets/dyeable_shulkers/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [

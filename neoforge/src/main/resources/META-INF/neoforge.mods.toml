@@ -15,7 +15,7 @@ Icon Designer: Yeettee
 description = '''
 Dye your Shulkers!
 '''
-#logoFile = ""
+logoFile = "dyeable_shulkers_logo.png"
 
 [[dependencies.dyeable_shulkers]]
 modId = "neoforge"
