@@ -14,7 +14,7 @@ public final class DyeableShulkersFabric implements ModInitializer {
         DyeableShulkers.init();
         UseEntityCallback.EVENT.register((player, level, interactionHand, entity, entityHitResult) -> {
             Entity targetEntity = entityHitResult != null ? entityHitResult.getEntity() : null;
-            return ShulkerInteractEvent.onPlayerInteractWithShulker(player/*, interactionHand*/, targetEntity, level);
+            return ShulkerInteractEvent.onPlayerInteractWithShulker(player, interactionHand, targetEntity, level);
         });
     }
 }

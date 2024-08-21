@@ -23,24 +23,28 @@
         private static final byte YELLOW_DYE = 4;
         private static final byte PINK_DYE = 6; // Bocchi chan Color
 
-        public static InteractionResult onPlayerInteractWithShulker(Player player/*, InteractionHand hand*/, Entity targetEntity, Level level) {
+        public static InteractionResult onPlayerInteractWithShulker(Player player, InteractionHand hand, Entity targetEntity, Level level) {
             if (player.isSpectator() || !(targetEntity instanceof Shulker)) {
-                return InteractionResult.FAIL;
+                return InteractionResult.PASS;
             }
-            InteractionHand hand = player.getUsedItemHand();
+            //InteractionHand hand = player.getUsedItemHand();
             Item itemInHand = player.getItemInHand(hand).getItem();
 
             Byte dyeColorID = DyeableShulkers.getColorMap(itemInHand);
 
+
+
             if (dyeColorID == null) {
-                return InteractionResult.FAIL;
+                return InteractionResult.PASS;
             }
 
             Byte shulkerColorID = DyeableShulkers.getColorID(targetEntity);
             if (shulkerColorID.equals(dyeColorID)) {
-                return InteractionResult.FAIL;
+                return InteractionResult.PASS;
             }
-
+            if(player.isCrouching()) {
+                return InteractionResult.PASS;
+            }
             if (!level.isClientSide()) {
                 level.playSound(null, targetEntity.getOnPos(), SoundEvents.HONEYCOMB_WAX_ON, SoundSource.BLOCKS, 1.0F, 1.0F);
                 DyeableShulkers.setColor(targetEntity, dyeColorID);
@@ -63,7 +67,7 @@
                                 targetEntity.getZ(),
                                 DyeableShulkers.getItem(shulkerColorID).getDefaultInstance()));
                         if (shulkerColorID == PINK_DYE || shulkerColorID == YELLOW_DYE || shulkerColorID == LIGHT_BLUE_DYE) {
-                            level.playSound(null, targetEntity.getOnPos(), SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(DyeableShulkers.MOD_ID, "bocchi_sound")), SoundSource.BLOCKS, 1.0F, 1.0F);
+                            level.playSound(null, targetEntity.getOnPos(), SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(DyeableShulkers.MOD_ID, "dyeable_shulkers_bocchi_sound")), SoundSource.BLOCKS, 1.0F, 1.0F);
 
                         } else
                             level.playSound(null, targetEntity.getOnPos(), SoundEvents.HONEY_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);

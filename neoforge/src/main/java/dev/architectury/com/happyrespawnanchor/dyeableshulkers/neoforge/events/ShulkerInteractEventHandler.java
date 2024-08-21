@@ -3,6 +3,7 @@ package dev.architectury.com.happyrespawnanchor.dyeableshulkers.neoforge.events;
 import dev.architectury.com.happyrespawnanchor.dyeableshulkers.DyeableShulkers;
 import dev.architectury.com.happyrespawnanchor.dyeableshulkers.events.ShulkerInteractEvent;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.monster.Shulker;
 import net.minecraft.world.entity.player.Player;
@@ -19,8 +20,10 @@ public class ShulkerInteractEventHandler {
 
         Player player = event.getEntity();
         Level level = event.getLevel();
-        InteractionHand interactionHand = player.getUsedItemHand();
-        event.setCanceled(true); // md这个坑了我半天，原来要加这个neoforge才会挥手
-        event.setCancellationResult(ShulkerInteractEvent.onPlayerInteractWithShulker(player/*, interactionHand*/, targetEntity, level));
+        InteractionHand interactionHand = event.getHand();
+        if(ShulkerInteractEvent.onPlayerInteractWithShulker(player,interactionHand ,targetEntity, level) == InteractionResult.SUCCESS){
+            event.setCanceled(true); // 这个坑了我半天，原来要加这个neoforge才会挥手
+            event.setCancellationResult(ShulkerInteractEvent.onPlayerInteractWithShulker(player, interactionHand,targetEntity, level));
+        }
     }
 }
