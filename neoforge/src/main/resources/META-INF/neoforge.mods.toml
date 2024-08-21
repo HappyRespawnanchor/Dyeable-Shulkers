@@ -9,6 +9,9 @@ modId = "dyeable_shulkers"
 version = "${version}"
 displayName = "Dyeable Shulkers"
 authors = "HappyRespawnanchor"
+credits = '''
+Icon Designer: Yeettee
+'''
 description = '''
 Dye your Shulkers!
 '''

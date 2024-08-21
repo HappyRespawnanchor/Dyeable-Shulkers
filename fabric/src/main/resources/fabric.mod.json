@@ -8,9 +8,13 @@
   "authors": [
     "HappyRespawnanchor"
   ],
+  "contributors": [
+    "Icon Designer: Yeettee"
+  ],
   "contact": {
     "homepage": "https://github.com/HappyRespawnanchor/dyeable_shulkers",
-    "sources": "https://github.com/HappyRespawnanchor/dyeable_shulkers"
+    "sources": "https://github.com/HappyRespawnanchor/dyeable_shulkers",
+    "issues": "https://github.com/HappyRespawnanchor/dyeable_shulkers/issues"
   },
   "license": "CC0-1.0",
   "icon": "assets/dye_my_shulkers/icon.png",
