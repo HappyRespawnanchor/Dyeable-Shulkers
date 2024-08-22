@@ -33,9 +33,10 @@ public class ShulkerInteractEventHandler {
         Player player = event.getEntity();
         Level level = event.getLevel();
         InteractionHand interactionHand = event.getHand();
-        if(ShulkerInteractEvent.onPlayerInteractWithShulker(player,interactionHand ,targetEntity, level) == InteractionResult.SUCCESS){
+        InteractionResult interactionResult = ShulkerInteractEvent.onPlayerInteractWithShulker(player,interactionHand ,targetEntity, level);
+        if(interactionResult == InteractionResult.SUCCESS){
             event.setCanceled(true); // 这个坑了我半天，原来要加这个neoforge才会挥手
-            event.setCancellationResult(ShulkerInteractEvent.onPlayerInteractWithShulker(player, interactionHand,targetEntity, level));
+            event.setCancellationResult(interactionResult);
         }
     }
 }
