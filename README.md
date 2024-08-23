@@ -1,4 +1,4 @@
-### [Modrinth](https://modrinth.com/mod/another-dyeable-shulkers) | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/another-dyeable-shulkers)
+### [Modrinth](https://modrinth.com/mod/another-dyeable-shulkers) | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/another-dyeable-shulkers) | [McMod Page (Chinese only)](https://www.mcmod.cn/class/16186.html)
 
 ![Logo](https://cdn.modrinth.com/data/cached_images/c530393b247e93486f884145b9a34d4a5cb12b6f.png)
 
