@@ -4,7 +4,7 @@
   "version": "${version}",
   "name": "Dyeable Shulkers",
   "accessWidener": "dyeable_shulkers.accesswidener",
-  "description": "Dye your Shulkers!",
+  "description": "Dye your Shulker & Shulker Box!",
   "authors": [
     "HappyRespawnanchor"
   ],

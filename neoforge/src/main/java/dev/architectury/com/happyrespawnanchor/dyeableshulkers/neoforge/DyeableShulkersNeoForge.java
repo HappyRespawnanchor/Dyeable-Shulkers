@@ -1,5 +1,5 @@
 /*
-    Dyeable Shulkers   - Dye your Shulkers!
+    Dyeable Shulkers   - Dye your Shulker & Shulker Box!
 
     Written in 2024 by HappyRespawnanchor happyrespawnanchor@gmail.com
 
