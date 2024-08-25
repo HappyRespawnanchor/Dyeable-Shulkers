@@ -2,7 +2,7 @@
 
 ![Logo](https://cdn.modrinth.com/data/cached_images/c530393b247e93486f884145b9a34d4a5cb12b6f.png)
 
-This mod allows you to dye Shulkers just like in the Bedrock Edition. (using dye in Survival mode will consume the dye)
+This mod allows you to dye Shulker or Shulker Box just like in the Bedrock Edition. (using dye in Survival mode will consume the dye)
 
 Dyeing with Dye:
 
