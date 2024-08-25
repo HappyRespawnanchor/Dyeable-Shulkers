@@ -7,5 +7,14 @@
         "stream": true
       }
     ]
+  },
+  "dyeable_shulkers_bocchi_shakai_ga_kowai_sound": {
+    "subtitle": "dyeable_shulkers.subtitle.bocchi_shakai_ga_kowai_sound",
+    "sounds": [
+      {
+        "name": "dyeable_shulkers:bocchi_shakai_ga_kowai",
+        "stream": true
+      }
+    ]
   }
 }

@@ -9,5 +9,5 @@ The work *Bocchi the Rock!* is licensed under the:
 
 This may affect your ability to distribute Dyeable Shulkers.
 
-If needed, please remove `common/src/main/resources/assets/dyeable_shulkers/sounds/bocchi.ogg` to ensure you are not affected by the licensing restrictions of the work *Bocchi the Rock!*.
+If needed, please remove `common/src/main/resources/assets/dyeable_shulkers/sounds/bocchi.ogg` and `common/src/main/resources/assets/dyeable_shulkers/sounds/bocchi_shakai_ga_kowai.ogg` to ensure you are not affected by the licensing restrictions of the work *Bocchi the Rock!*.
     

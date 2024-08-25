@@ -34,6 +34,8 @@ public final class DyeableShulkers {
     private static final Map<Byte, Item> COLOR_ID_MAP = new HashMap<>();
     private static final Map<Item, DyeColor> DYE_ITEM_MAP = new HashMap<>();
     private static final Map<Integer, BlockState> SHULKER_MAP = new HashMap<>();
+    private static final Map<BlockState, Integer> SHULKER_BLOCK_MAP = new HashMap<>();
+    private static final Map<DyeColor, Item> DYE_COLOR_ITEM_MAP = new HashMap<>();
 
     static {
         SHULKER_MAP.put(0, Blocks.WHITE_SHULKER_BOX.defaultBlockState());
@@ -53,6 +55,9 @@ public final class DyeableShulkers {
         SHULKER_MAP.put(14, Blocks.RED_SHULKER_BOX.defaultBlockState());
         SHULKER_MAP.put(15, Blocks.BLACK_SHULKER_BOX.defaultBlockState());
         SHULKER_MAP.put(16, Blocks.SHULKER_BOX.defaultBlockState());
+        for (Map.Entry<Integer, BlockState> entry : SHULKER_MAP.entrySet()) {
+            SHULKER_BLOCK_MAP.put(entry.getValue(), entry.getKey());
+        }
     }
 
     static {
@@ -85,6 +90,25 @@ public final class DyeableShulkers {
             COLOR_ID_MAP.put(entry.getValue(), entry.getKey());
             DYE_ITEM_MAP.put(entry.getKey(), DyeColor.byId(entry.getValue()));
         }
+    }
+
+    static {
+        DYE_COLOR_ITEM_MAP.put(DyeColor.WHITE, Items.WHITE_DYE);
+        DYE_COLOR_ITEM_MAP.put(DyeColor.ORANGE, Items.ORANGE_DYE);
+        DYE_COLOR_ITEM_MAP.put(DyeColor.MAGENTA, Items.MAGENTA_DYE);
+        DYE_COLOR_ITEM_MAP.put(DyeColor.LIGHT_BLUE, Items.LIGHT_BLUE_DYE);
+        DYE_COLOR_ITEM_MAP.put(DyeColor.YELLOW, Items.YELLOW_DYE);
+        DYE_COLOR_ITEM_MAP.put(DyeColor.LIME, Items.LIME_DYE);
+        DYE_COLOR_ITEM_MAP.put(DyeColor.PINK, Items.PINK_DYE);
+        DYE_COLOR_ITEM_MAP.put(DyeColor.GRAY, Items.GRAY_DYE);
+        DYE_COLOR_ITEM_MAP.put(DyeColor.LIGHT_GRAY, Items.LIGHT_GRAY_DYE);
+        DYE_COLOR_ITEM_MAP.put(DyeColor.CYAN, Items.CYAN_DYE);
+        DYE_COLOR_ITEM_MAP.put(DyeColor.PURPLE, Items.PURPLE_DYE);
+        DYE_COLOR_ITEM_MAP.put(DyeColor.BLUE, Items.BLUE_DYE);
+        DYE_COLOR_ITEM_MAP.put(DyeColor.BROWN, Items.BROWN_DYE);
+        DYE_COLOR_ITEM_MAP.put(DyeColor.GREEN, Items.GREEN_DYE);
+        DYE_COLOR_ITEM_MAP.put(DyeColor.RED, Items.RED_DYE);
+        DYE_COLOR_ITEM_MAP.put(DyeColor.BLACK, Items.BLACK_DYE);
     }
 
 
@@ -120,6 +144,10 @@ public final class DyeableShulkers {
         return SHULKER_MAP.get(color);
     }
 
+    public static Integer getShulkerBlockId(BlockState blockState) {
+        return SHULKER_BLOCK_MAP.get(blockState);
+    }
+
     public static void updateShulkerBoxColor(Level level, BlockPos pos, DyeColor color, BlockState blockState, ShulkerBoxBlockEntity shulkerBoxBlockEntity, CompoundTag nbt) {
         level.setBlockAndUpdate(pos, getShulkerId(color.getId()).setValue(BlockStateProperties.FACING, blockState.getValue(BlockStateProperties.FACING)));
         ShulkerBoxBlockEntity newShulkerBox = (ShulkerBoxBlockEntity) level.getBlockEntity(pos);
@@ -128,7 +156,24 @@ public final class DyeableShulkers {
         }
     }
 
+    public static void updateShulkerBoxNoneColor(Level level, BlockPos pos, BlockState blockState, ShulkerBoxBlockEntity shulkerBoxBlockEntity, CompoundTag nbt) {
+        // 获取默认 Shulker Box 的 BlockState
+        BlockState defaultState = SHULKER_MAP.get(16); // 假设 16 是默认（无色）状态
 
+        // 更新 BlockState 为默认（无色）
+        level.setBlockAndUpdate(pos, defaultState.setValue(BlockStateProperties.FACING, blockState.getValue(BlockStateProperties.FACING)));
+
+        // 重新加载 NBT 数据
+        ShulkerBoxBlockEntity newShulkerBox = (ShulkerBoxBlockEntity) level.getBlockEntity(pos);
+        if (newShulkerBox != null) {
+            newShulkerBox.loadWithComponents(nbt, level.registryAccess());
+        }
+    }
+
+
+    public static Item getDyeColorItem(DyeColor color) {
+        return DYE_COLOR_ITEM_MAP.get(color);
+    }
 }
 
 
