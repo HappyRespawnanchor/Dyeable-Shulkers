@@ -8,7 +8,7 @@ Dyeing with Dye:
 
 ![Dyeing with Dye](https://cdn.modrinth.com/data/cached_images/1f60de5554e5c205acac79df1d9f318d1613b46f.webp)
 
-You can use any quality of sword to remove the color. The dye will not be returned.
+You can use any quality of sword to remove the color. The dye will not be returned. (sword durability in  Survival mode will be consumed)
 
 Removing Color with a Sword:
 
@@ -18,4 +18,4 @@ If you use an End Rod to remove the color, there is a 50% chance that the dye wi
 
 Removing Color with an End Rod:
 
-![Replace this with a description](https://cdn.modrinth.com/data/cached_images/de0d6a18d49404823b899ce66707cf49879b488d.webp)
+![Removing Color with an End Rod](https://cdn.modrinth.com/data/cached_images/de0d6a18d49404823b899ce66707cf49879b488d.webp)
