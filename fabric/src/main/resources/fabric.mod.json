@@ -3,7 +3,6 @@
   "id": "dyeable_shulkers",
   "version": "${version}",
   "name": "Dyeable Shulkers",
-  "accessWidener": "dyeable_shulkers.accesswidener",
   "description": "Dye your Shulker & Shulker Box!",
   "authors": [
     "HappyRespawnanchor"
@@ -25,7 +24,7 @@
     ]
   },
   "depends": {
-    "fabricloader": ">=0.16.2",
+    "fabricloader": ">=0.16.7",
     "minecraft": ">=1.21",
     "java": ">=21",
     "fabric-api": "*"

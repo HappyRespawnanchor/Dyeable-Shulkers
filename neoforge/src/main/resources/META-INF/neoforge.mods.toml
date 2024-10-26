@@ -15,7 +15,7 @@ Icon Designer: Yeettee
 description = '''
 Dye your Shulker & Shulker Box!
 '''
-logoFile = "dyeable_shulkers_logo.png"
+logoFile = "icon.png"
 
 [[dependencies.dyeable_shulkers]]
 modId = "neoforge"
@@ -30,6 +30,3 @@ type = "required"
 versionRange = "[1.21,)"
 ordering = "NONE"
 side = "BOTH"
-
-[[accessTransformers]]
-file="META-INF/accesstransformer.cfg"
