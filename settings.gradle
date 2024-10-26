@@ -7,7 +7,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'dyeable_shulkers'
+rootProject.name = 'Dyeable-Shulkers'
 
 include 'common'
 include 'fabric'
