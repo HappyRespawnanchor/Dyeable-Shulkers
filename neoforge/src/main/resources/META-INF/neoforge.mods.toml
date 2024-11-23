@@ -1,6 +1,5 @@
 modLoader = "javafml"
 loaderVersion = "[4,)"
-displayURL = "https://github.com/HappyRespawnanchor/dyeable_shulkers/issues"
 issueTrackerURL = "https://github.com/HappyRespawnanchor/dyeable_shulkers/issues"
 license = "CC0-1.0"
 
@@ -15,13 +14,14 @@ Icon Designer: Yeettee
 description = '''
 Dye your Shulker & Shulker Box!
 '''
+displayURL = "https://github.com/HappyRespawnanchor/dyeable_shulkers"
 logoFile = "icon.png"
 logoBlur = false
 modUrl = "https://modrinth.com/mod/ayame-paperdoll"
 [[dependencies.dyeable_shulkers]]
 modId = "neoforge"
 type = "required"
-versionRange = "[21.0,)"
+versionRange = "[21.0.167,)"
 ordering = "NONE"
 side = "BOTH"
 
