@@ -16,7 +16,8 @@ description = '''
 Dye your Shulker & Shulker Box!
 '''
 logoFile = "icon.png"
-
+logoBlur = false
+modUrl = "https://modrinth.com/mod/ayame-paperdoll"
 [[dependencies.dyeable_shulkers]]
 modId = "neoforge"
 type = "required"
